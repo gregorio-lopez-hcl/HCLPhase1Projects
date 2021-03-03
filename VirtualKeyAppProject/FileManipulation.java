@@ -29,6 +29,7 @@ public abstract class FileManipulation implements DisMenus {
 	
 	public static void RemoveFile () { 
 		boolean check = false; 
+		DisMenus.display("\nPlease input the name of the file you would like to delete: ");
 		String ftdelete = DisMenus.GetUStr(); 
 		try { 
 			File ef = new File ("C:\\Users\\Public\\Documents\\" + ftdelete);
@@ -37,8 +38,8 @@ public abstract class FileManipulation implements DisMenus {
 				ef.delete();
 				System.out.println("\nYour selected file has been deleted " + ef);
 			} else {
-				System.err.println("\nIncorrect file name, please re-enter: ");
-				RemoveFile(); 
+				System.err.println("\nIncorrect file name, please re-enter.");
+				
 			}	
 		} catch (Exception e) {
 			System.err.println(e.getMessage());
@@ -47,6 +48,7 @@ public abstract class FileManipulation implements DisMenus {
 	
 	public static void FindFile () { 
 		boolean check = false; 
+		DisMenus.display("\nPlease input the name of the file you would like to find: ");
 		String ffind = DisMenus.GetUStr(); 
 		File ef = new File("C:\\Users\\Public\\Documents\\"); 
 		String[] files = ef.list(); 
@@ -55,8 +57,8 @@ public abstract class FileManipulation implements DisMenus {
 				check = true;
 			}
 		}
-		System.out.println(check ? "\nThe file: " +ffind+ " has been found in the folder Users\\Public\\Documents \\n" : "\nThe file: " +ffind+
-				 "has not been found in the folder Users\\Public\\Documents. '\n");
+		System.out.println(check ? "\nThe file: **" +ffind+ "** has been found in the folder Users\\Public\\Documents \\n" : "\nThe file: **" +ffind+
+				 "** has not been found in the folder Users\\Public\\Documents\n");
 	}
 
 }

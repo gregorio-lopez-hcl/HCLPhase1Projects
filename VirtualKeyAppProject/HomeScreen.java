@@ -6,7 +6,7 @@ public class HomeScreen implements DisMenus{
 	
 	String wt = "\nWelcome to the Virual Key Application\n"; 
 	String dev = "By: Gregorio J. Lopez\n";
-	String selOp = "Please choose one of the following options (input an number): "; 
+	String selOp = "Please choose one of the following options (integers only): "; 
 	private ArrayList<String> welopts = new ArrayList<String> (); 
 	
 	public void welcomeMenu () { 
