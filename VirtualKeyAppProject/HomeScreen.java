@@ -4,30 +4,31 @@ import java.util.ArrayList;
 
 public class HomeScreen implements DisMenus{
 	
-	String wt = "\nWelcome to the Virual Key Application\n"; 
-	String dev = "By: Gregorio J. Lopez\n";
-	String selOp = "Please choose one of the following options (integers only): "; 
-	private ArrayList<String> welopts = new ArrayList<String> (); 
+	static String wt = "\nWelcome to the Virual Key Application\n"; 
+	static String dev = "By: Gregorio J. Lopez\n";
+	static String selOp = "Please choose one of the following options (integers only): "; 
+	static ArrayList<String> welopts = new ArrayList<String> (); 
 	
-	public void welcomeMenu () { 
+	public static void welcomeOptions () { 
 		welopts.add("1. Display Existing Files ->");
 		welopts.add("2. Display File Options Menu ->");
 		welopts.add("3. Quit Application ->");
 	}
 	
-	public void DisplayMenu () {
+	public static void displayMenu () {
 		
 		DisMenus.display(wt);
 		DisMenus.display(dev);
-		
-		for (String i : welopts) {
-			DisMenus.display(i);
+		DisMenus.display(selOp);
+	
+		for (String s : welopts) {
+			System.out.println(s);
 		}
 	}
 
-	public void UserOptions () { 
-		DisMenus.display(selOp);
-		int uop = DisMenus.GetUInt();
+	public void userOptions () { 
+	
+		int uop = DisMenus.GetUInt(); //calls interface for user input for integer
 		this.DisOptions(uop); 
 		
 	}

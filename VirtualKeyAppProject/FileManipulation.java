@@ -1,6 +1,9 @@
 package VirtualKeyAppProject;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.Collections;
+
 
 
 
@@ -9,8 +12,15 @@ public abstract class FileManipulation implements DisMenus {
 	
 	public static void DisplayExFiles () { 
 		File disef = new File("C:\\Users\\Public\\Documents\\");
+		System.out.println("The existing files are as follows: \n");
+		//File[] files = disef.listFiles(); 
+		//ArrayList<File> file = new ArrayList<File>();
+		
+		//Arrays.sort(files, NameFileCopmarator.length);
+		//Collections.sort(file);
+		
 		for(String filename : disef.list()) {
-			System.out.println("\nExisting files are as follows: " + filename);
+			System.out.println(filename);
 		}
 	}
 	
@@ -58,7 +68,7 @@ public abstract class FileManipulation implements DisMenus {
 			}
 		}
 		System.out.println(check ? "\nThe file: **" +ffind+ "** has been found in the folder Users\\Public\\Documents \\n" : "\nThe file: **" +ffind+
-				 "** has not been found in the folder Users\\Public\\Documents\n");
+				 "** has not been found in the folder Users\\Public\\Documents.\n");
 	}
 
 }

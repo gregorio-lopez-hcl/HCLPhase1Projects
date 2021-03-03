@@ -5,9 +5,10 @@ import java.util.ArrayList;
 public class FileOpScreen implements DisMenus {
 
 	String subm = "\n------------------------------------------------------- \nWelcome to the File Options Submenu, please choose an option (integers only): ";
-	ArrayList<String> fopts = new ArrayList<>(); 
+	ArrayList<String> fopts = new ArrayList<String>(); 
 	
 	public void fileOpScreen () { 
+		
 		fopts.add("1. Add a file ->");
 		fopts.add("2. Remove a file ->");
 		fopts.add("3. Search for a file ->");
@@ -15,6 +16,7 @@ public class FileOpScreen implements DisMenus {
 	}
 	
 	public void DisplayMenu () {
+		fileOpScreen();
 		DisMenus.display(subm);
 		
 		for (String i: fopts) {
@@ -45,8 +47,8 @@ public class FileOpScreen implements DisMenus {
 			break; 
 		case 4: 
 			HomeScreen hs = new HomeScreen();
-			hs.DisplayMenu();
-			hs.UserOptions();
+			hs.displayMenu();
+			hs.userOptions();
 			
 			break; 
 		default: 

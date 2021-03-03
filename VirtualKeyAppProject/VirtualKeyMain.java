@@ -4,10 +4,12 @@ public class VirtualKeyMain {
 
 	public static void main(String[] args) {
 		
+		HomeScreen hs = new HomeScreen();
+		hs.welcomeOptions(); 
+		
 		while (true) {
-			HomeScreen hs = new HomeScreen();
-			hs.DisplayMenu();
-			hs.UserOptions();
+			hs.displayMenu();
+			hs.userOptions();
 		}
 	}
 
