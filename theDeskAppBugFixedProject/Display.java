@@ -49,7 +49,6 @@ public class Display {
 	                        System.out.println("Your saved expenses are listed below: \n");
 	                        System.out.println(expenses+"\n");
 	                        
-	                        
 	                        break;
 	                    case 2:
 	                        System.out.println("\nEnter the value to add your Expense:");
@@ -62,7 +61,7 @@ public class Display {
 	                        } catch (InputMismatchException f) {
 	                        	System.err.println("\nYou have input an invalid value! Please use an integer. \n");
 	                        }
-	                        //try-catch
+	                       
 	                        break;
 	                    case 3:
 	                        System.out.println("You are about the delete all your expenses! \nConfirm again by selecting the same option...\n");
