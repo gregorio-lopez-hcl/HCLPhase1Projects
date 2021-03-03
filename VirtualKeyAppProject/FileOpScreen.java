@@ -52,7 +52,7 @@ public class FileOpScreen implements DisMenus {
 			
 			break; 
 		default: 
-			System.err.println("You have input an invalid value! Please input 1-4");
+			System.err.println("\nYou have input an invalid value! Please input 1-4");
 			break; 
 		}
 	}

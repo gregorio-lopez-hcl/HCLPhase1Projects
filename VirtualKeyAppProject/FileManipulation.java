@@ -13,11 +13,6 @@ public abstract class FileManipulation implements DisMenus {
 	public static void DisplayExFiles () { 
 		File disef = new File("C:\\Users\\Public\\Documents\\");
 		System.out.println("The existing files are as follows: \n");
-		//File[] files = disef.listFiles(); 
-		//ArrayList<File> file = new ArrayList<File>();
-		
-		//Arrays.sort(files, NameFileCopmarator.length);
-		//Collections.sort(file);
 		
 		for(String filename : disef.list()) {
 			System.out.println(filename);
@@ -46,7 +41,7 @@ public abstract class FileManipulation implements DisMenus {
 			check = ef.exists();
 			if (check) { 
 				ef.delete();
-				System.out.println("\nYour selected file has been deleted " + ef);
+				System.out.println("\nYour selected file has been deleted: " + ef);
 			} else {
 				System.err.println("\nIncorrect file name, please re-enter.");
 				
@@ -58,7 +53,7 @@ public abstract class FileManipulation implements DisMenus {
 	
 	public static void FindFile () { 
 		boolean check = false; 
-		DisMenus.display("\nPlease input the name of the file you would like to find: ");
+		DisMenus.display("\nPlease input the name of the file you would like to find (include file format): ");
 		String ffind = DisMenus.GetUStr(); 
 		File ef = new File("C:\\Users\\Public\\Documents\\"); 
 		String[] files = ef.list(); 

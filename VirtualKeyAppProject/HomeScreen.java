@@ -4,7 +4,8 @@ import java.util.ArrayList;
 
 public class HomeScreen implements DisMenus{
 	
-	static String wt = "\nWelcome to the Virual Key Application\n"; 
+	static String ln = "--------------------------------------------\n";
+	static String wt = "Welcome to the Virual Key Application\n"; 
 	static String dev = "By: Gregorio J. Lopez\n";
 	static String selOp = "Please choose one of the following options (integers only): "; 
 	static ArrayList<String> welopts = new ArrayList<String> (); 
@@ -17,6 +18,7 @@ public class HomeScreen implements DisMenus{
 	
 	public static void displayMenu () {
 		
+		DisMenus.display(ln);
 		DisMenus.display(wt);
 		DisMenus.display(dev);
 		DisMenus.display(selOp);
@@ -52,7 +54,7 @@ public class HomeScreen implements DisMenus{
 			
 			break; 
 		default: 
-			System.err.println("You have input an invalid value! Please input 1-3.");
+			System.err.println("\nYou have input an invalid value! Please input 1-3.");
 			break; 
 		}
 	
