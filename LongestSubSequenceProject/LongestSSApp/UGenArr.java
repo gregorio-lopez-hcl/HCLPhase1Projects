@@ -27,7 +27,7 @@ public class UGenArr {
 		uArrList.add (assign);	
 		}
 	//print out ArrayList
-	System.out.println("You have succesffully generated an array with the length: '" + ui + "' and the contents of: '" + uArrList + "'");
+	System.out.println("You have succesffully generated an array with the length: '" + ui + "' with the contents of: '" + uArrList + "'");
 	
 		
 	}
